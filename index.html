@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>De Leal para vc 🥰</title>
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <style>
+    body {
+      background-color: pink;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      text-align: center;
+    }
+    .button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    #nao {
+      position: absolute;
+    }
+    .hidden {
+      display: none;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap; /* Permite que as imagens sejam exibidas em várias linhas */
+    }
+    .gallery img {
+      width: 300px; /* Ajuste o tamanho das imagens conforme desejado */
+      height: auto;
+      margin: 10px; /* Espaçamento entre as imagens */
+      position: relative;
+    }
+    .gallery p {
+      position: absolute;
+      top: 50%; /* Posiciona o texto no centro vertical da imagem */
+      left: 50%; /* Posiciona o texto no centro horizontal da imagem */
+      transform: translate(-50%, -50%); /* Centraliza o texto */
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
+    }
+    .agradecimento {
+      font-size: 24px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#nao").hover(
+        function() {
+          $(this).css("left", Math.random() * ($(window).width() - $(this).outerWidth()) + 'px');
+          $(this).css("top", Math.random() * ($(window).height() - $(this).outerHeight()) + 'px');
+        }
+      );
+
+      $("#sim").click(function() {
+        $("#resposta-sim").removeClass("hidden");
+        setTimeout(function(){
+          window.location.href = "https://www.youtube.com/watch?v=v7IIrvPinv0&ab_channel=videosfunk";
+        }, 5000); // 5000 milissegundos = 5 segundos
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Quer fudê comigo?</h1>
+    <button class="button" id="sim">Sim</button>
+    <button class="button" id="nao">Não</button>
+    <div id="resposta-sim" class="hidden">
+      <div class="gallery">
+        <img src="images\image.png" alt="Image 1">
+        <img src="images\image1.png" alt="Image 2">
+        <img src="images\image2.png" alt="Image 3">
+      </div>
+      <p class="agradecimento">Obrigada por aceitar meu convite meu amor! 
+        <h3>"Ei gatinha tava passando ali de longe te vi e te achei muito tchutchuquinha e ai pensei slc que tal eu e você.
+        <h3>você e eu dando umas beijocas, selinhos, beijinhos e bitoquinhas na boca em, bem naquele jeitão"</h3>  
+        <h1>💘💖💗💓💕🥰😍</h1>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
